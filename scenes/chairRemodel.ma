@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: chairRemodel.ma
-//Last modified: Wed, Jun 22, 2022 02:23:13 PM
+//Last modified: Wed, Jun 22, 2022 08:41:51 PM
 //Codeset: 1252
 requires maya "2023";
 requires "mtoa" "5.1.0";
@@ -10,17 +10,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202202161415-df43006fd3";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19043)";
-fileInfo "UUID" "8BDD88EB-4ED2-F9AE-039F-70A712CA62B8";
+fileInfo "UUID" "685E6514-4380-0306-1926-8E901985C39F";
 createNode transform -s -n "persp";
 	rename -uid "533264F6-4DCB-3B85-0455-7DB46F2F3940";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.9988198923114591 13.977616791923879 15.071352381598841 ;
-	setAttr ".r" -type "double3" 325.46164726956601 366.1999999998103 1.9995420695174609e-16 ;
+	setAttr ".t" -type "double3" 3.8514649534925991 28.100220253216154 22.006806918186079 ;
+	setAttr ".r" -type "double3" 312.26164726955744 368.99999999980309 -8.0505017391045698e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "CB1282E1-4311-2F17-04B0-6BA55A5000F4";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 18.511299275421727;
+	setAttr ".coi" 33.263540036855773;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -101,7 +101,7 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.48041754961013794 0.16838346421718597 ;
+	setAttr ".pv" -type "double2" 0.48508936166763306 0.49749532341957092 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -293,7 +293,7 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".pv" -type "double2" 0.60714283585548401 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -614,13 +614,13 @@ createNode polyMapSewMove -n "polyMapSewMove1";
 createNode polyTweakUV -n "polyTweakUV3";
 	rename -uid "8EED7956-43B6-3B13-F8A3-4589702F9C30";
 	setAttr ".uopa" yes;
-	setAttr -s 22 ".uvtk[0:21]" -type "float2" -0.24943876 -0.20363306 0.29028535
-		 0.14805907 0.28480983 0.167386 -0.26379329 -0.18929893 0.31452218 0.31011999 -0.4063054
-		 -0.15853977 0.11711405 -0.86480117 -0.032298625 0.8636499 0.75777066 -0.37250024
-		 0.089488521 -0.8571068 -0.28098255 -0.34891057 0.43190348 0.11527113 -0.02191174
-		 -0.82715923 0.065158069 0.79067445 -0.0075877309 -0.80672431 0.73633206 -0.27952951
-		 0.43887579 0.13334313 0.758654 -0.27284116 -0.2994628 -0.3521671 -0.74434137 0.26436272
-		 -0.77149552 0.38304663 0.75834364 -0.40258503;
+	setAttr -s 22 ".uvtk[0:21]" -type "float2" -0.24943876 0.13579634 0.29028535
+		 0.48748848 0.28480983 0.50681543 -0.26379329 0.15013048 0.31452218 0.64954937 -0.4063054
+		 0.18088964 0.11711405 -0.52537179 -0.032298625 1.20307922 0.75777066 -0.033070832
+		 0.089488521 -0.51767743 -0.28098255 -0.0094811469 0.43190348 0.45470053 -0.02191174
+		 -0.48772982 0.065158069 1.13010383 -0.0075877309 -0.4672949 0.73633206 0.059899896
+		 0.43887579 0.47277254 0.758654 0.066588253 -0.2994628 -0.012737706 -0.74434137 0.60379219
+		 -0.77149552 0.72247601 0.75834364 -0.063155621;
 select -ne :time1;
 	setAttr ".o" 82;
 	setAttr ".unw" 82;
